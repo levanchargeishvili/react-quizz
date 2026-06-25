@@ -1,0 +1,32 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.layout__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.layout__main {
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+
+@media (min-width: 1025px) {
+  .layout__main {
+    padding: 2rem 2.5rem 2.5rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout__main {
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .layout__main {
+    padding: 1.25rem 1rem 2rem;
+  }
+}

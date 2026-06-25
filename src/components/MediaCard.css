@@ -1,0 +1,107 @@
+.media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.media-card__image-wrap {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.media-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 164 / 100;
+  object-fit: cover;
+}
+
+.media-card__bookmark {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(16, 20, 30, 0.5);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.media-card__bookmark:hover {
+  background: var(--text-primary);
+}
+
+.media-card__bookmark:hover svg path {
+  stroke: var(--bg-primary);
+}
+
+.media-card__bookmark--active {
+  background: var(--text-primary);
+}
+
+.media-card__bookmark--active svg path {
+  fill: var(--bg-primary);
+  stroke: var(--bg-primary);
+}
+
+.media-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.media-card__category-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.media-card__dot {
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+}
+
+.media-card__title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .media-card__title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .media-card__image {
+    aspect-ratio: 282 / 174;
+  }
+
+  .media-card__title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .media-card__bookmark {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
